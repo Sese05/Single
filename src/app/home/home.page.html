@@ -1,0 +1,103 @@
+<ion-header>
+  <ion-toolbar class="ios hydrated">
+    <ion-title class="ios title-ios hydrated">
+      Collecting Data
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  
+ <ion-list>
+   <form [formGroup]="InfoForm" (ngSubmit)="formSubmit()">
+     <ion-item>
+       <ion-label postion="floating">FirstName:</ion-label>
+       <ion-input  class="form-control" formControlName="firstname" type="text" required>
+       </ion-input>
+     </ion-item>
+
+     <ion-item>
+      <ion-label postion="floating">LastName:</ion-label>
+      <ion-input  class="form-control" formControlName="lastname" type="text" required>
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label postion="floating">Email:</ion-label>
+      <ion-input class="form-control" formControlName="email" type="text" required>
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label postion="floating">Password:</ion-label>
+      <ion-input class="form-control" formControlName ="password" type="password" required>
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label postion="floating">Reg Number:</ion-label>
+      <ion-input class="form-control" formControlName="regnumber" type="text" required>
+      </ion-input>
+    </ion-item>
+
+
+  <ion-list>
+   <ion-radio-group (ionSelect)="formSumbit()">
+     <ion-list-header>
+       <ion-label>Select which organization does your hospital fall under:</ion-label>
+     </ion-list-header>
+
+    <ion-item>
+      <ion-label>Priavte Hospital</ion-label>
+      <ion-radio class="form-group" slot="start" value="private" checked></ion-radio>
+    </ion-item>
+<ion-item>
+      <ion-label>Public Hospital</ion-label>
+      <ion-radio class="form-group" slot="start" value="public" checked></ion-radio>
+    </ion-item>
+  </ion-radio-group>
+  </ion-list>
+
+  <ion-list>
+    <ion-radio-group value="masking">
+      <ion-list-header>
+        <ion-label>how many surgical mask uses in your organization?</ion-label>
+      </ion-list-header>
+ 
+     <ion-item>
+       <ion-label>100-150</ion-label>
+       <ion-radio class="form-group" slot="start" value="masks" checked></ion-radio>
+     </ion-item>
+      <ion-item>
+       <ion-label>150-250</ion-label>
+       <ion-radio class="form-group" slot="start" value="mask" checked></ion-radio>
+     </ion-item>
+     <ion-item>
+      <ion-label>250-350</ion-label>
+      <ion-radio class="form-group" slot="start" value="mask1" checked></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>350-500</ion-label>
+      <ion-radio class="form-group" slot="start" value="mask2" checked></ion-radio>
+    </ion-item>
+
+   </ion-radio-group>
+   
+ 
+
+  <ion-item>
+    <ion-label postion="floating">How many users require full PPE?</ion-label>
+    <ion-input class="form-control" formControlName="ppenumber" type="text" required>
+    </ion-input>
+  </ion-item>
+</ion-list>
+    <ion-row>   
+      <ion-col>
+        <ion-button type="sumbit" color="primary" (click)="formSubmit()" shape="full" expand="block" >Submit</ion-button>
+      </ion-col>
+    </ion-row>
+
+   </form>
+  
+ </ion-list>
+</ion-content>

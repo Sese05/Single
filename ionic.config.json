@@ -1,0 +1,8 @@
+{
+  "name": "senzii",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}
